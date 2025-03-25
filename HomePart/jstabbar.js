@@ -7,6 +7,6 @@ listItems.forEach((item, index) =>{
 
         item.classList.add("active");
 
-        indicator.style.left = '${index * 70}px';
+        indicator.style.left = index * 70 + 'px'
     })
 })

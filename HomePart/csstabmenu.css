@@ -1,16 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root
+{
+    --color-black: #222327;
+}
 
 .navigation
 {
     position: relative;
     width: 210px;
     height: 70px;
-    background-color: #fff;
+    background-color:transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    margin-top: 35px;
 }
 
 
@@ -20,13 +33,14 @@
     width: 350px;
 }
 
+
 .navigation ul li
 {
     position: relative;
     list-style: none;
     width: 70px;
     height: 70px;
-    z-index: -1;
+    z-index: 1;
 }
 
 
@@ -35,6 +49,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     text-align: center;
@@ -46,37 +61,36 @@
 {
     position: relative;
     display: block;
-    line-height: 75px;
+    line-height: 70px;
     font-size: 1.5em;
     text-align: center;
     transition: 0.5s;
-    color: #222327;
+    color: var(--color-black);
 }
+
 
 .navigation ul li.active a .icon
 {
     transform: translateY(-32px);
 }
 
-
 .navigation ul li a .text
 {
     position: absolute;
-    color: #222327;
+    color: blue;
     font-weight: 400;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
+    font-size: 0.80em;
+    letter-spacing: 0.1em;
     transition: 0.5s;
     opacity: 0;
     transform: translateY(20px);
-}
 
+}
 
 .navigation ul li.active a .text
 {
     opacity: 1;
-    transform: translateY(10px);
-
+    transform: translateY(20px);
 }
 
 
@@ -88,10 +102,9 @@
     height: 70px;
     background-color: #29fd53;
     border-radius: 50%;
-    border: 6px solid color(#222327);
+    border: 6px ;
     transition: 0.5s;
 }
-
 
 .indicator::before
 {
@@ -103,27 +116,30 @@
     height: 20px;
     background-color: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 color(#222327);
+    
 }
+
 
 .indicator::after
 {
     content: '';
     position: absolute;
     top: 50%;
-    right: -22px;
+    right: -20.5px;
     width: 20px;
     height: 20px;
     background-color: transparent;
     border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 color(#222327);
+    
 }
+
 
 
 .navigation ul li:nth-child(1) .active .indicator
 {
     transform: translateX(calc(70px * 0));
 }
+
 
 
 .navigation ul li:nth-child(2) .active .indicator
