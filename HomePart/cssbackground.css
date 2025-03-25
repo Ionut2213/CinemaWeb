@@ -4,8 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #D2D2D2;
+/* body{
     background-image:
     repeating-linear-gradient(
         to right, transparent 0 100px,
@@ -15,7 +14,7 @@ body{
         to bottom, transparent 0 100px,
         #25283b22 100px 101px
     );
-}
+} */
 
 body::before {
     content: '';
